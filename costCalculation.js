@@ -32,6 +32,7 @@ const costCalculation = (itemCode, money) => {
     } else if (money < sodaCost) {
       let restamount = sodaCost - money;
       console.log(`Soda's cost is Rs.${sodaCost}.Kindly add ${restamount} Rupees more.`);
+    
     } else {
       console.log(`You are Buying Soda and submitted ${money}Rs.`);
       console.log("Thanks for Purchase...");
@@ -41,4 +42,4 @@ const costCalculation = (itemCode, money) => {
   }
 };
 
-costCalculation("A3", 100);
+costCalculation("A3", 200);
