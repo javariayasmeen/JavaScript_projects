@@ -3,11 +3,16 @@ const userEmail = () => {
     let enteredEmail=prompt(`Please Enter Your Email!!`);
     if(enteredEmail){
         alert(` Your Email is : ${enteredEmail}`);
-        confirm(`Do you want to save your Email??`);
-        alert(`Your Email Saved Successfully!!`)
+        let save=confirm(`Do you want to save Email??`)
+        if(save){
+            alert(`Email is saved successfully!!`);
+        }
+        else{
+            alert(`Operation cancelled successfully!! `);
+        }
     }
     else{
-        alert(`No Email Entered.`);
+        alert('No Email Entered');
     }
 }
 userEmail();
