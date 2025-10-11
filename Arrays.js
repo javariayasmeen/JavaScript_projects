@@ -20,7 +20,7 @@ array2.shift();
 console.log("Array After Elements' Removal:",array2);
 //Elements at specific index
 console.log("Element at Index 2:", array2[2]);
-console.log("Elements at Index 4:", array2[4]);
+console.log("Element at Index 4:", array2[4]);
 
 
 
