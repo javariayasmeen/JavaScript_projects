@@ -2,7 +2,7 @@ let countries = [
     "Turkey",
     "Finland",
     "Germany",
-    "Candaa",
+    "Canada",
     "Netherland",
     "Romania",
     "Australia",
