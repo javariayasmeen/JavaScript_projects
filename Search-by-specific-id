@@ -38,7 +38,7 @@ const trans_History = (selected_User,trans_Sum) => {
     setTimeout(() =>{
         const trans_Amounts = selected_User?.transactions;
         if (trans_Amounts&& trans_Amounts.length>0){ 
-        console.log("History of Transaction:",trans_Amounts);
+        console.log("History of Transactions:",trans_Amounts);
         trans_Sum(trans_Amounts);}
         else { 
         console.log("No Transcation Found!!!");
@@ -50,10 +50,10 @@ const trans_Sum = (trans_Amounts) => {
     setTimeout(() => {
         if (trans_Amounts) {
             let transactionsSum = 0;
-            trans_Amounts.forEach((amount) => transactionsSum += amount );
-            console.log(" Sum of Total Transitions:", transactionsSum);
+            trans_Amounts.forEach((Amount) => transactionsSum += Amount );
+            console.log(" Sum of Total Transactions:", transactionsSum);
         }else{
-                console.log("No Transaction to Calculate Sum!!");
+                console.log("No Transactions to Calculate Sum!!");
                 
             } 
               },1000);
