@@ -1,0 +1,65 @@
+const usersWithTransactions = [{
+     id: 1,
+     name: "Raima",
+     transactions:[100,200,50],
+},
+{
+     id: 2,
+     name: "Ali",
+     transactions:[50,100],
+},
+{
+     id: 3,
+     name: "Hina",
+     transactions:[],
+},
+{
+     id: 4,
+     name: "Mujtaba Alam",
+     transactions:[2000,4000,1500],
+}
+];
+const fetch_User = (id, Trans_User_Func) =>
+{
+    setTimeout(() => {
+        const selected_User = usersWithTransactions.find(user => user.id === id);
+    if (selected_User) {
+        console.log("Details of Selected Users :",selected_User);
+        Trans_User_Func(selected_User)    
+    }
+    else {
+        console.log("No User Found!");
+        Trans_User_Func(null);
+    }
+
+    },1000);
+};
+const trans_History = (selected_User,trans_Sum) => {
+    setTimeout(() =>{
+        const trans_Amounts = selected_User?.transactions;
+        if (trans_Amounts&& trans_Amounts.length>0){ 
+        console.log("History of Transaction:",trans_Amounts);
+        trans_Sum(trans_Amounts);}
+        else { 
+        console.log("No Transcation Found!!!");
+        trans_Sum(null); }   
+    },2000);
+};
+
+const trans_Sum = (trans_Amounts) => {
+    setTimeout(() => {
+        if (trans_Amounts) {
+            let transactionsSum = 0;
+            trans_Amounts.forEach((amount) => transactionsSum += amount );
+            console.log(" Sum of Total Transitions:", transactionsSum);
+        }else{
+                console.log("No Transaction to Calculate Sum!!");
+                
+            } 
+              },1000);
+        };
+        fetch_User(3,(selected_User) => {
+            if (selected_User) {
+                trans_History (selected_User, trans_Sum);
+            };
+        });
